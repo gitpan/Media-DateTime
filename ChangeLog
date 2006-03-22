@@ -1,0 +1,71 @@
+2006-03-22 02:44  mgrimes
+
+	* trunk/media-datetime/META.yml, 
+	  trunk/media-datetime/t/10-basic.t, 
+	  trunk/media-datetime/t/11-noobj.t: Need a better 
+	  filesystem/default test.
+
+2006-03-22 00:58  mgrimes
+
+	* trunk/media-datetime/Makefile.PL, trunk/media-datetime/TODO, 
+	  trunk/media-datetime/lib/Media/DateTime.pm, 
+	  trunk/media-datetime/lib/Media/DateTime/JPEG.pm: Cleaned up POD.
+
+2006-03-21 02:27  mgrimes
+
+	* trunk/media-datetime/t/10-basic.t, 
+	  trunk/media-datetime/t/11-noobj.t: Adde cygwin check in test.
+
+2006-03-21 01:51  mgrimes
+
+	* trunk/media-datetime/lib/Media/DateTime.pm, 
+	  trunk/media-datetime/lib/Media/DateTime/JPEG.pm: Added error 
+	  checking and fallback.
+
+2006-03-20 21:59  mgrimes
+
+	* trunk/media-datetime/Build, trunk/media-datetime/ChangeLog, 
+	  trunk/media-datetime/_build, trunk/media-datetime/blib, 
+	  trunk/media-datetime/svn-commit.tmp: Put too much into svn.
+
+2006-03-20 21:56  mgrimes
+
+	* trunk/media-datetime, trunk/media-datetime/Build, 
+	  trunk/media-datetime/Build.PL, trunk/media-datetime/ChangeLog, 
+	  trunk/media-datetime/MANIFEST, trunk/media-datetime/META.yml, 
+	  trunk/media-datetime/Makefile.PL, 
+	  trunk/media-datetime/README.head, trunk/media-datetime/_build, 
+	  trunk/media-datetime/_build/build_params, 
+	  trunk/media-datetime/_build/cleanup, 
+	  trunk/media-datetime/_build/config_data, 
+	  trunk/media-datetime/_build/features, 
+	  trunk/media-datetime/_build/notes, 
+	  trunk/media-datetime/_build/prereqs, trunk/media-datetime/blib, 
+	  trunk/media-datetime/blib/arch, trunk/media-datetime/blib/lib, 
+	  trunk/media-datetime/blib/lib/Media, 
+	  trunk/media-datetime/blib/lib/Media/DateTime, 
+	  trunk/media-datetime/blib/lib/Media/DateTime.pm, 
+	  trunk/media-datetime/blib/lib/Media/DateTime/JPEG.pm, 
+	  trunk/media-datetime/blib/libdoc, 
+	  trunk/media-datetime/blib/libdoc/Media.DateTime.3pm, 
+	  trunk/media-datetime/lib, trunk/media-datetime/lib/Media, 
+	  trunk/media-datetime/lib/Media/DateTime, 
+	  trunk/media-datetime/lib/Media/DateTime.pm, 
+	  trunk/media-datetime/lib/Media/DateTime/JPEG.pm, 
+	  trunk/media-datetime/svn-commit.tmp, trunk/media-datetime/t, 
+	  trunk/media-datetime/t/00-new.t, 
+	  trunk/media-datetime/t/10-basic.t, 
+	  trunk/media-datetime/t/11-noobj.t, 
+	  trunk/media-datetime/t/98-pod.t, 
+	  trunk/media-datetime/t/99-podcoverage.t, 
+	  trunk/media-datetime/t/ex, trunk/media-datetime/t/ex/dcim-src, 
+	  trunk/media-datetime/t/ex/dcim-src/PICT0010.jpg, 
+	  trunk/media-datetime/t/ex/dcim-src/PICT0011.jpg, 
+	  trunk/media-datetime/t/ex/dcim-src/PICT0012.jpg, 
+	  trunk/media-datetime/t/ex/dcim-src/PICT0045.jpg, 
+	  trunk/media-datetime/t/ex/dcim-src/PICT0046.JPG, 
+	  trunk/media-datetime/t/ex/dcim-src/PICT0047.jpg, 
+	  trunk/media-datetime/t/ex/dcim-src/dup0047.jpg, 
+	  trunk/media-datetime/t/ex/dcim-src/textfile.txt: Moved the 
+	  DateTime routines out of Sorter.
+

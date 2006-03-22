@@ -1,0 +1,24 @@
+---
+name: Media-DateTime
+version: 0.20
+author:
+  - 'Mark V. Grimes, E<lt>mgrimes@cpan.org<gt>'
+abstract: |-
+  An highly extensible module to extract the creation
+  date and time from a file.
+license: perl
+requires:
+  Carp: 0
+  DateTime: 0
+  Hash::Util: 0.05
+  Image::Info: 0
+  Module::Pluggable: 0
+  perl: 5.008
+provides:
+  Media::DateTime:
+    file: lib/Media/DateTime.pm
+    version: 0.20
+  Media::DateTime::JPEG:
+    file: lib/Media/DateTime/JPEG.pm
+    version: 0.20
+generated_by: Module::Build version 0.2611

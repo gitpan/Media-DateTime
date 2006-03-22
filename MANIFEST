@@ -1,0 +1,15 @@
+MANIFEST
+ChangeLog
+Build.PL
+README
+lib/Media/DateTime.pm
+lib/Media/DateTime/JPEG.pm
+t/00-new.t
+t/10-basic.t
+t/11-noobj.t
+t/98-pod.t
+t/99-podcoverage.t
+t/ex/src/normal.jpg
+t/ex/src/no-exif.jpg
+t/ex/src/textfile.txt
+META.yml                                 Module meta-data (added by MakeMaker)
