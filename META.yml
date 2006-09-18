@@ -1,6 +1,6 @@
 ---
 name: Media-DateTime
-version: 0.20
+version: 0.30
 author:
   - 'Mark V. Grimes, E<lt>mgrimes@cpan.org<gt>'
 abstract: |-
@@ -11,14 +11,14 @@ requires:
   Carp: 0
   DateTime: 0
   Hash::Util: 0.05
-  Image::Info: 0
+  Image::ExifTool: 0
   Module::Pluggable: 0
   perl: 5.008
 provides:
   Media::DateTime:
     file: lib/Media/DateTime.pm
-    version: 0.20
+    version: 0.30
   Media::DateTime::JPEG:
     file: lib/Media/DateTime/JPEG.pm
-    version: 0.20
+    version: 0.30
 generated_by: Module::Build version 0.2611

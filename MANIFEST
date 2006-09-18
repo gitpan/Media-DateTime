@@ -1,15 +1,22 @@
-MANIFEST
-ChangeLog
+.releaserc
 Build.PL
-README
+ChangeLog
 lib/Media/DateTime.pm
 lib/Media/DateTime/JPEG.pm
+Makefile.PL
+MANIFEST
+META.yml			Module meta-data (added by MakeMaker)
+README
+scripts/media-datetime
 t/00-new.t
 t/10-basic.t
 t/11-noobj.t
+t/97-critic.t
 t/98-pod.t
 t/99-podcoverage.t
-t/ex/src/normal.jpg
+t/ex/src/empty.jpg
+t/ex/src/exif-corrupt.jpg
 t/ex/src/no-exif.jpg
+t/ex/src/normal.jpg
 t/ex/src/textfile.txt
-META.yml                                 Module meta-data (added by MakeMaker)
+t/perlcriticrc

@@ -8,7 +8,7 @@ my $build = Module::Build->new(
 			'Carp'				=> 0,
 			'Hash::Util'		=> 0.05,
 			'Module::Pluggable'	=> 0,
-			'Image::Info'		=> 0,
+			'Image::ExifTool'	=> 0,
 			'DateTime'			=> 0,
 		},
 	recommends				=> {

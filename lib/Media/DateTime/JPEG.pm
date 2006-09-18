@@ -4,26 +4,30 @@ use strict;
 use warnings;
 
 use Carp;
-use Image::Info qw(image_info);
+use Image::ExifTool;
 use DateTime;
 
-our $VERSION = '0.20';
+our $VERSION = '0.30';
+my $exifTool;
 
 sub datetime {
 	my ($self, $f) = @_;
 
-	my $info = image_info($f);
-	croak "Can't parse image ($f) info: " . $info->{error}
-			if $info->{error};
+	$exifTool = Image::ExifTool->new() unless $exifTool;
+	$exifTool->ExtractInfo( $f ) or do {
+		warn "Exiftool unable to read: $f\nFallback to file timestamp.\n";
+		return;       
+	};                  
 
+	my $datetime = $exifTool->GetValue( 'DateTimeOriginal' );
 	do {
-		carp "JPEG does not contain DateTimeOriginal exif entry ($f),\nfallback to file timestamp.\n";
-		return undef;
-	} unless exists $info->{DateTimeOriginal};
+		warn "JPEG does not contain DateTimeOriginal exif entry ($f),\nFallback to file timestamp.\n";
+		return;
+	} unless $datetime;
 
 
 	# DateTime format = yyyy:mm:dd hh:mm:ss
-	my ($y,$m,$d,$h,$min,$s) = $info->{DateTime} =~ m/
+	my ($y,$m,$d,$h,$min,$s) = $datetime =~ m/
 						(\d{4})  :	# year
 						(\d{2})  :  # month
 						(\d{2})     # day
@@ -32,7 +36,7 @@ sub datetime {
 						(\d{2})  :  # min
 						(\d{2})     # sec
 					/x
-		or croak "failed DateTime pattern match in $f\n";
+		or die "failed DateTime pattern match in $f\n";
 
 	my $date = DateTime->new(	year	=> $y,
 								month	=> $m,
@@ -40,13 +44,15 @@ sub datetime {
 		   						hour	=> $h,
 								minute	=> $min,
 								second	=> $s,
-					) or croak "couldnt create DateTime";
+					) or die "couldnt create DateTime";
+
+	return $date;
 }
 
 sub match { 
 	my ($self,$f) = @_;
 
-	return $f =~ /\.jpe?g$/i;
+	return $f =~ /\.jpe?g$/i;			## no critic
 	# TODO: should we use something more complicated here? maybe mime type?
 }   
 

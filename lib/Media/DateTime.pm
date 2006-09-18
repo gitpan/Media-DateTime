@@ -24,7 +24,7 @@ use Module::Pluggable
 		require		=> 1,		
 		sub_name	=> 'matchers';
 
-our $VERSION = '0.20';
+our $VERSION = '0.30';
 
 sub new {
 	my $that  = shift;
@@ -46,7 +46,7 @@ sub datetime {
 sub _datetime_from_filesystem_stamp {
 	my ($self, $f) = @_;
 
-	my $c_date = (stat($f))[10];
+	my $c_date = (stat($f))[9];
 	return DateTime->from_epoch( epoch => $c_date, time_zone => 'local' );
 }
 
