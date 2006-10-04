@@ -1,4 +1,3 @@
-.releaserc
 Build.PL
 ChangeLog
 lib/Media/DateTime.pm
