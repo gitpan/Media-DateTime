@@ -47,6 +47,10 @@ SEE ALSO
     are used to implement the plugin system. "Image::Info" is used to
     extract data from JPEG files for the "Media::DateTime::JPEG" plugin.
 
+    Make sure you have configured the local time zone on your machine. See
+    "DateTime::TimeZone::Local" for information on how the timezone is
+    determined.
+
 AUTHOR
     Mark V. Grimes, <mgrimes@cpan.org<gt>
 

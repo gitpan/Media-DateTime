@@ -1,10 +1,15 @@
 use strict;
 use warnings;
 
-use Test::More tests => 5;
-
+use Test::More;
 use Media::DateTime;
 use DateTime;
+
+use DateTime::TimeZone;
+eval { my $tz = DateTime::TimeZone->new( name => 'local' ); };
+plan( skip_all => 'Local timezone is not configured, see DateTime::TimeZone' )
+        if $@ =~ /determine local time/;
+plan tests => 5;
 
 my $dater = Media::DateTime->new();
 ok $dater, "Created new Media::DateTime";

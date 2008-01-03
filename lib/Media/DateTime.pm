@@ -24,7 +24,7 @@ use Module::Pluggable
 		require		=> 1,		
 		sub_name	=> 'matchers';
 
-our $VERSION = '0.40';
+our $VERSION = '0.42';
 
 sub new {
 	my $that  = shift;
@@ -115,6 +115,10 @@ See the excellent C<DateTime> module which simplifies the handling of dates.
 See C<Module::Pluggable> and C<Module::Pluggable::Ordered> which are used
 to implement the plugin system. C<Image::Info> is used to extract data from
 JPEG files for the C<Media::DateTime::JPEG> plugin.
+
+Make sure you have configured the local time zone on your machine. See
+C<DateTime::TimeZone::Local> for information on how the timezone is 
+determined.
 
 =head1 AUTHOR
 

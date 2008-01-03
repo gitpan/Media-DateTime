@@ -10,6 +10,7 @@ scripts/media-datetime
 t/00-new.t
 t/10-basic.t
 t/11-noobj.t
+t/96-kwalitee.t
 t/97-critic.t
 t/98-pod.t
 t/99-podcoverage.t
@@ -19,3 +20,4 @@ t/ex/src/no-exif.jpg
 t/ex/src/normal.jpg
 t/ex/src/textfile.txt
 t/perlcriticrc
+samples/dates.pl

@@ -1,211 +1,170 @@
+2008-01-03 02:27  mgrimes
+
+	* ., META.yml, Makefile.PL: Minor updates
+
+2007-12-29 01:06  mgrimes
+
+	* Build.PL: Added Client::Lirc module
+	  Updated the build_requires
+
+2007-11-02 22:05  mgrimes
+
+	* MANIFEST: Added file to manifest
+
+2007-11-02 20:38  mgrimes
+
+	* Build.PL, lib/Media/DateTime.pm, t/10-basic.t, t/11-noobj.t:
+	  Updated tests to check for local timezone
+
+2007-10-29 21:54  mgrimes
+
+	* t/96-kwalitee.t, t/97-critic.t, t/98-pod.t, t/99-podcoverage.t,
+	  t/perlcriticrc: Updated author tests
+
+2007-10-29 21:52  mgrimes
+
+	* MANIFEST, t/97-critic.t, t/98-pod.t, t/99-podcoverage.t,
+	  t/perlcriticrc: Tweaking tests
+
+2007-05-04 18:22  mgrimes
+
+	* samples, samples/dates.pl: Added example script
+
+2006-10-04 23:43  mgrimes
+
+	* META.yml, TODO: Cleanup
+
+2006-10-04 23:41  mgrimes
+
+	* lib/Media/DateTime.pm: Updated the version
+
+2006-10-04 23:39  mgrimes
+
+	* t/97-critic.t: Fixed use -> eval so we don't blow up if Critic
+	  isn't installed.
+
 2006-09-18 18:13  mgrimes
 
-	* trunk/media-datetime/MANIFEST, 
-	  trunk/media-datetime/MANIFEST.SKIP, 
-	  trunk/media-datetime/MANIFEST.skip: Tweaks to get the release to 
-	  work
+	* MANIFEST, MANIFEST.SKIP, MANIFEST.skip: Tweaks to get the release
+	  to work
 
 2006-09-18 17:48  mgrimes
 
-	* trunk/media-datetime/MANIFEST, 
-	  trunk/media-datetime/MANIFEST.skip, 
-	  trunk/media-datetime/Makefile.PL, trunk/media-datetime/scripts, 
-	  trunk/media-datetime/scripts/media-datetime: Adding script and 
-	  updating build env
+	* MANIFEST, MANIFEST.skip, Makefile.PL, scripts,
+	  scripts/media-datetime: Adding script and updating build env
 
 2006-09-18 17:46  mgrimes
 
-	* trunk/media-datetime/t/ex/src/exif-corrupt.jpg: Adding test file
+	* t/ex/src/exif-corrupt.jpg: Adding test file
 
 2006-09-18 17:29  mgrimes
 
-	* trunk/media-datetime/Build.PL, trunk/media-datetime/META.yml: 
-	  Update deps.
+	* Build.PL, META.yml: Update deps.
 
 2006-08-25 00:44  mgrimes
 
-	* trunk/media-datetime/t/ex/src/empty.jpg, 
-	  trunk/media-rodeo/t/controller_Helpers.t, 
-	  trunk/media-rodeo/t/model_CDBI-Role.t, 
-	  trunk/media-rodeo/t/model_CDBI-User.t, 
-	  trunk/media-rodeo/t/model_CDBI-UserRole.t, 
-	  trunk/media-rodeo/t/model_cdbi_role.t, 
-	  trunk/media-rodeo/t/model_cdbi_user.t, 
-	  trunk/media-rodeo/t/model_cdbi_userrole.t: Added new files.
+	* t/ex/src/empty.jpg: Added new files.
 
 2006-08-16 18:04  mgrimes
 
-	* trunk/media-datetime/t/97-critic.t, 
-	  trunk/media-datetime/t/perlcriticrc: Added perl critic tests.
+	* t/97-critic.t, t/perlcriticrc: Added perl critic tests.
 
 2006-08-08 15:27  mgrimes
 
-	* trunk/media-datetime/lib/Media/DateTime/JPEG.pm: Fixes to please 
-	  perlcritic.
+	* lib/Media/DateTime/JPEG.pm: Fixes to please perlcritic.
 
 2006-07-12 17:22  mgrimes
 
-	* trunk/media-datetime/t/10-basic.t, 
-	  trunk/media-datetime/t/11-noobj.t, trunk/media-rodeo/README, 
-	  trunk/media-rodeo/media_rodeo.yml, 
-	  trunk/media-rodeo/script/migrate-media: More stuff
+	* t/10-basic.t, t/11-noobj.t: More stuff
 
 2006-07-01 00:23  mgrimes
 
-	* trunk/media-datetime/lib/Media/DateTime.pm, 
-	  trunk/media-datetime/lib/Media/DateTime/JPEG.pm, 
-	  trunk/media-datetime/t/10-basic.t, 
-	  trunk/media-datetime/t/11-noobj.t, 
-	  trunk/media-rodeo/script/migrate-albums, 
-	  trunk/media-rodeo/script/migrate-media, 
-	  trunk/media-rodeo/script/msorter, 
-	  trunk/media-sorter/t/10-basic.t, trunk/media-sorter/t/11-move.t: 
-	  Added _local.yml support to migrate scripts.
+	* lib/Media/DateTime.pm, lib/Media/DateTime/JPEG.pm, t/10-basic.t,
+	  t/11-noobj.t: Added _local.yml support to migrate scripts.
 	  Changed M::DateTime to use stat[9] - mtime
 	  Fixed tests to test mtime with touch then test.
 	  More error capturing in msorter
 
 2006-06-23 16:35  mgrimes
 
-	* trunk/media-datetime/lib/Media/DateTime.pm, 
-	  trunk/media-rodeo/lib/Media/Rodeo.pm, 
-	  trunk/media-rodeo/t/model_CDBI-Album.t, 
-	  trunk/media-rodeo/t/model_CDBI-Media.t, 
-	  trunk/media-rodeo/t/model_CDBI-Meta.t, 
-	  trunk/media-rotator/Build.PL, trunk/media-sorter/Build.PL, 
-	  trunk/media-sorter/t/10-basic.t, trunk/media-sorter/t/11-move.t, 
-	  trunk/media-sorter/t/ex/dcim-src/textfile.txt: Got rodeo working 
-	  with the new version of catalyst.
+	* lib/Media/DateTime.pm: Got rodeo working with the new version of
+	  catalyst.
 	  Removed a few dependancies on Test::Files
-	  REmoved the textfile.txt media-sorter test since is wasn't 
-	  really testing anything.
+	  REmoved the textfile.txt media-sorter test since is wasn't really
+	  testing anything.
 	  Update a few versions.
 
 2006-06-14 01:36  mgrimes
 
-	* trunk/brsync/Build.PL, trunk/brsync/lib/BRsync.pm, 
-	  trunk/brsync/t/20-exec.t, trunk/brsync/t/50-brsync.t, 
-	  trunk/brsync/t/51-brsync-push.t, 
-	  trunk/brsync/t/52-brsync-pull.t, trunk/brsync/t/brsync, 
-	  trunk/media-datetime/TODO, trunk/media-rodeo/TODO, 
-	  trunk/media-rodeo/createdb, 
-	  trunk/media-rodeo/lib/Media/Rodeo/Model/CDBI.pm, 
-	  trunk/media-rodeo/media_rodeo.yml, 
-	  trunk/media-rodeo/root/album.tt, 
-	  trunk/media-rodeo/root/albums.tt, 
-	  trunk/media-rodeo/root/grouper.tt, 
-	  trunk/media-rodeo/root/slide_show.tt, 
-	  trunk/media-rodeo/root/static/myapp.js, 
-	  trunk/media-rodeo/root/static/rodeo.css, 
-	  trunk/media-sorter/lib/Media/Sorter.pm, 
-	  trunk/media-sorter/msorter2: More stuff
+	* TODO: More stuff
 
 2006-03-22 17:59  mgrimes
 
-	* trunk/media-datetime/MANIFEST.skip: more...
+	* MANIFEST.skip: more...
 
 2006-03-22 17:57  mgrimes
 
-	* trunk/media-datetime/MANIFEST.skip: Added the .svn dirs
+	* MANIFEST.skip: Added the .svn dirs
 
 2006-03-22 17:53  mgrimes
 
-	* trunk/media-datetime/MANIFEST.skip: Still cleaning up for 
-	  release.
+	* MANIFEST.skip: Still cleaning up for release.
 
 2006-03-22 17:49  mgrimes
 
-	* trunk/media-datetime/.releaserc: Add release stuff.
+	* .releaserc: Add release stuff.
 
 2006-03-22 17:48  mgrimes
 
-	* trunk/media-datetime/MANIFEST, trunk/media-datetime/META.yml, 
-	  trunk/media-datetime/README.head, 
-	  trunk/media-datetime/lib/Media/DateTime/JPEG.pm, 
-	  trunk/media-datetime/t/10-basic.t, 
-	  trunk/media-datetime/t/11-noobj.t, 
-	  trunk/media-datetime/t/ex/dcim-src, 
-	  trunk/media-datetime/t/ex/src, 
-	  trunk/media-datetime/t/ex/src/PICT0010.jpg, 
-	  trunk/media-datetime/t/ex/src/PICT0011.jpg, 
-	  trunk/media-datetime/t/ex/src/PICT0012.jpg, 
-	  trunk/media-datetime/t/ex/src/PICT0045.jpg, 
-	  trunk/media-datetime/t/ex/src/PICT0046.JPG, 
-	  trunk/media-datetime/t/ex/src/PICT0047.jpg, 
-	  trunk/media-datetime/t/ex/src/dup0047.jpg, 
-	  trunk/media-datetime/t/ex/src/no-exif.jpg, 
-	  trunk/media-datetime/t/ex/src/normal.jpg: Slimmed down the size 
-	  of the test jpegs.
+	* MANIFEST, META.yml, README.head, lib/Media/DateTime/JPEG.pm,
+	  t/10-basic.t, t/11-noobj.t, t/ex/dcim-src, t/ex/src,
+	  t/ex/src/PICT0010.jpg, t/ex/src/PICT0011.jpg,
+	  t/ex/src/PICT0012.jpg, t/ex/src/PICT0045.jpg,
+	  t/ex/src/PICT0046.JPG, t/ex/src/PICT0047.jpg,
+	  t/ex/src/dup0047.jpg, t/ex/src/no-exif.jpg, t/ex/src/normal.jpg:
+	  Slimmed down the size of the test jpegs.
 	  Changed JPEG.pm to look for DateTimeOriginal exif flag.
 
 2006-03-22 02:44  mgrimes
 
-	* trunk/media-datetime/META.yml, 
-	  trunk/media-datetime/t/10-basic.t, 
-	  trunk/media-datetime/t/11-noobj.t: Need a better 
+	* META.yml, t/10-basic.t, t/11-noobj.t: Need a better
 	  filesystem/default test.
 
 2006-03-22 00:58  mgrimes
 
-	* trunk/media-datetime/Makefile.PL, trunk/media-datetime/TODO, 
-	  trunk/media-datetime/lib/Media/DateTime.pm, 
-	  trunk/media-datetime/lib/Media/DateTime/JPEG.pm: Cleaned up POD.
+	* Makefile.PL, TODO, lib/Media/DateTime.pm,
+	  lib/Media/DateTime/JPEG.pm: Cleaned up POD.
 
 2006-03-21 02:27  mgrimes
 
-	* trunk/media-datetime/t/10-basic.t, 
-	  trunk/media-datetime/t/11-noobj.t: Adde cygwin check in test.
+	* t/10-basic.t, t/11-noobj.t: Adde cygwin check in test.
 
 2006-03-21 01:51  mgrimes
 
-	* trunk/media-datetime/lib/Media/DateTime.pm, 
-	  trunk/media-datetime/lib/Media/DateTime/JPEG.pm: Added error 
+	* lib/Media/DateTime.pm, lib/Media/DateTime/JPEG.pm: Added error
 	  checking and fallback.
 
 2006-03-20 21:59  mgrimes
 
-	* trunk/media-datetime/Build, trunk/media-datetime/ChangeLog, 
-	  trunk/media-datetime/_build, trunk/media-datetime/blib, 
-	  trunk/media-datetime/svn-commit.tmp: Put too much into svn.
+	* Build, ChangeLog, _build, blib, svn-commit.tmp: Put too much into
+	  svn.
 
 2006-03-20 21:56  mgrimes
 
-	* trunk/media-datetime, trunk/media-datetime/Build, 
-	  trunk/media-datetime/Build.PL, trunk/media-datetime/ChangeLog, 
-	  trunk/media-datetime/MANIFEST, trunk/media-datetime/META.yml, 
-	  trunk/media-datetime/Makefile.PL, 
-	  trunk/media-datetime/README.head, trunk/media-datetime/_build, 
-	  trunk/media-datetime/_build/build_params, 
-	  trunk/media-datetime/_build/cleanup, 
-	  trunk/media-datetime/_build/config_data, 
-	  trunk/media-datetime/_build/features, 
-	  trunk/media-datetime/_build/notes, 
-	  trunk/media-datetime/_build/prereqs, trunk/media-datetime/blib, 
-	  trunk/media-datetime/blib/arch, trunk/media-datetime/blib/lib, 
-	  trunk/media-datetime/blib/lib/Media, 
-	  trunk/media-datetime/blib/lib/Media/DateTime, 
-	  trunk/media-datetime/blib/lib/Media/DateTime.pm, 
-	  trunk/media-datetime/blib/lib/Media/DateTime/JPEG.pm, 
-	  trunk/media-datetime/blib/libdoc, 
-	  trunk/media-datetime/blib/libdoc/Media.DateTime.3pm, 
-	  trunk/media-datetime/lib, trunk/media-datetime/lib/Media, 
-	  trunk/media-datetime/lib/Media/DateTime, 
-	  trunk/media-datetime/lib/Media/DateTime.pm, 
-	  trunk/media-datetime/lib/Media/DateTime/JPEG.pm, 
-	  trunk/media-datetime/svn-commit.tmp, trunk/media-datetime/t, 
-	  trunk/media-datetime/t/00-new.t, 
-	  trunk/media-datetime/t/10-basic.t, 
-	  trunk/media-datetime/t/11-noobj.t, 
-	  trunk/media-datetime/t/98-pod.t, 
-	  trunk/media-datetime/t/99-podcoverage.t, 
-	  trunk/media-datetime/t/ex, trunk/media-datetime/t/ex/dcim-src, 
-	  trunk/media-datetime/t/ex/dcim-src/PICT0010.jpg, 
-	  trunk/media-datetime/t/ex/dcim-src/PICT0011.jpg, 
-	  trunk/media-datetime/t/ex/dcim-src/PICT0012.jpg, 
-	  trunk/media-datetime/t/ex/dcim-src/PICT0045.jpg, 
-	  trunk/media-datetime/t/ex/dcim-src/PICT0046.JPG, 
-	  trunk/media-datetime/t/ex/dcim-src/PICT0047.jpg, 
-	  trunk/media-datetime/t/ex/dcim-src/dup0047.jpg, 
-	  trunk/media-datetime/t/ex/dcim-src/textfile.txt: Moved the 
-	  DateTime routines out of Sorter.
+	* ., Build, Build.PL, ChangeLog, MANIFEST, META.yml, Makefile.PL,
+	  README.head, _build, _build/build_params, _build/cleanup,
+	  _build/config_data, _build/features, _build/notes,
+	  _build/prereqs, blib, blib/arch, blib/lib, blib/lib/Media,
+	  blib/lib/Media/DateTime, blib/lib/Media/DateTime.pm,
+	  blib/lib/Media/DateTime/JPEG.pm, blib/libdoc,
+	  blib/libdoc/Media.DateTime.3pm, lib, lib/Media,
+	  lib/Media/DateTime, lib/Media/DateTime.pm,
+	  lib/Media/DateTime/JPEG.pm, svn-commit.tmp, t, t/00-new.t,
+	  t/10-basic.t, t/11-noobj.t, t/98-pod.t, t/99-podcoverage.t, t/ex,
+	  t/ex/dcim-src, t/ex/dcim-src/PICT0010.jpg,
+	  t/ex/dcim-src/PICT0011.jpg, t/ex/dcim-src/PICT0012.jpg,
+	  t/ex/dcim-src/PICT0045.jpg, t/ex/dcim-src/PICT0046.JPG,
+	  t/ex/dcim-src/PICT0047.jpg, t/ex/dcim-src/dup0047.jpg,
+	  t/ex/dcim-src/textfile.txt: Moved the DateTime routines out of
+	  Sorter.
 
