@@ -15,6 +15,7 @@ my $build = Module::Build->new(
     build_requires  => {
             'Test::More'        => 0,
             'DateTime::TimeZone'=> 0,
+            'File::Which'       => 0,
                        },
 	recommends				=> {
 		},

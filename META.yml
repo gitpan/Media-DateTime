@@ -1,6 +1,6 @@
 ---
 name: Media-DateTime
-version: 0.42
+version: 0.43
 author:
   - 'Mark V. Grimes, E<lt>mgrimes@cpan.org<gt>'
 abstract: |-
@@ -18,11 +18,12 @@ requires:
   perl: 5.008
 build_requires:
   DateTime::TimeZone: 0
+  File::Which: 0
   Test::More: 0
 provides:
   Media::DateTime:
     file: lib/Media/DateTime.pm
-    version: 0.42
+    version: 0.43
   Media::DateTime::JPEG:
     file: lib/Media/DateTime/JPEG.pm
     version: 0.30

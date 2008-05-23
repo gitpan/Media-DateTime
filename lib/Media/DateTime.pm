@@ -24,7 +24,7 @@ use Module::Pluggable
 		require		=> 1,		
 		sub_name	=> 'matchers';
 
-our $VERSION = '0.42';
+our $VERSION = '0.43';
 
 sub new {
 	my $that  = shift;
