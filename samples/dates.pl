@@ -8,6 +8,6 @@ use DateTime;
 
 my $dater = Media::DateTime->new();
 
-for (@ARGV){
-    print "Date for $_: ", $dater->datetime( $_ )->datetime, "\n";
+for (@ARGV) {
+    print "Date for $_: ", $dater->datetime($_)->datetime, "\n";
 }

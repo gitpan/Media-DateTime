@@ -1,23 +1,19 @@
+bin/media-datetime
 Build.PL
-ChangeLog
+Changes
 lib/Media/DateTime.pm
 lib/Media/DateTime/JPEG.pm
-Makefile.PL
-MANIFEST
-META.yml			Module meta-data (added by MakeMaker)
-README
-scripts/media-datetime
-t/00-new.t
+MANIFEST			This list of files
+samples/dates.pl
+t/00-load.t
 t/10-basic.t
 t/11-noobj.t
-t/96-kwalitee.t
-t/97-critic.t
-t/98-pod.t
-t/99-podcoverage.t
 t/ex/src/empty.jpg
 t/ex/src/exif-corrupt.jpg
 t/ex/src/no-exif.jpg
 t/ex/src/normal.jpg
 t/ex/src/textfile.txt
-t/perlcriticrc
-samples/dates.pl
+t/ex/src/zero-in-exif.jpg
+README
+META.yml
+META.json

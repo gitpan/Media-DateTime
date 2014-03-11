@@ -1,6 +1,9 @@
 NAME
-    Media::DateTime - An highly extensible module to extract the creation
-    date and time from a file.
+    Media::DateTime - A simple module to extract the timestamp from media
+    files in an flexible manner.
+
+VERSION
+    version 0.45
 
 SYNOPSIS
       use DateTime;
@@ -52,12 +55,11 @@ SEE ALSO
     determined.
 
 AUTHOR
-    Mark V. Grimes, <mgrimes@cpan.org<gt>
+    unknown
 
 COPYRIGHT AND LICENSE
-    Copyright (C) 2006 by mgrimes
+    This software is copyright (c) 2014 by unknown.
 
-    This library is free software; you can redistribute it and/or modify it
-    under the same terms as Perl itself, either Perl version 5.8.2 or, at
-    your option, any later version of Perl 5 you may have available.
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
 

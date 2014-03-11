@@ -1,65 +1,56 @@
 package Media::DateTime;
 
-###########################################################################
-# Media::DateTime
-# Mark V. Grimes
-#
-# A simple module to extract the timestamp from media files in an flexible 
-# manner.
-#
-# Copyright (c) 2006 Mark V. Grimes (mgrimes@cpan.org).
-# All rights reserved. This program is free software; you can redistribute
-# it and/or modify it under the same terms as Perl itself.
-#
-# Formatted with tabstops at 4
-###########################################################################
+# ABSTRACT: A simple module to extract the timestamp from media files in an flexible manner.
 
 use strict;
 use warnings;
 
+our $VERSION = '0.45';
+
 use Carp;
 use DateTime;
-use Module::Pluggable 
-		search_path	=> 'Media::DateTime',
-		require		=> 1,		
-		sub_name	=> 'matchers';
-
-our $VERSION = '0.43';
+use Module::Pluggable
+  search_path => 'Media::DateTime',
+  require     => 1,
+  sub_name    => 'matchers';
 
 sub new {
-	my $that  = shift;
-	my $class = ref($that) || $that;	# Enables use to call $instance->new()
-	return bless {}, $class;
+    my $that = shift;
+    my $class = ref($that) || $that;    # Enables use to call $instance->new()
+    return bless {}, $class;
 }
 
 sub datetime {
-	my ($self,$f) = @_;
-	for my $class ($self->matchers){
-		if( $class->match( $f ) ){
-			my $v = $class->datetime( $f );
-			return $v if defined $v;
-		}
-	}
-	return $self->_datetime_from_filesystem_stamp( $f );
+    my ( $self, $f ) = @_;
+    for my $class ( $self->matchers ) {
+        if ( $class->match($f) ) {
+            my $v = $class->datetime($f);
+            return $v if defined $v;
+        }
+    }
+    return $self->_datetime_from_filesystem_stamp($f);
 }
 
 sub _datetime_from_filesystem_stamp {
-	my ($self, $f) = @_;
+    my ( $self, $f ) = @_;
 
-	my $c_date = (stat($f))[9];
-	return DateTime->from_epoch( epoch => $c_date, time_zone => 'local' );
+    my $c_date = ( stat($f) )[9];
+    return DateTime->from_epoch( epoch => $c_date, time_zone => 'local' );
 }
 
 1;
 
 __END__
 
-# Below is stub documentation for your module. You'd better edit it!
+=pod
 
 =head1 NAME
 
-Media::DateTime - An highly extensible module to extract the creation
-date and time from a file.
+Media::DateTime - A simple module to extract the timestamp from media files in an flexible manner.
+
+=head1 VERSION
+
+version 0.45
 
 =head1 SYNOPSIS
 
@@ -122,15 +113,13 @@ determined.
 
 =head1 AUTHOR
 
-Mark V. Grimes, E<lt>mgrimes@cpan.org<gt>
+unknown
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2006 by mgrimes
+This software is copyright (c) 2014 by unknown.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.8.2 or,
-at your option, any later version of Perl 5 you may have available.
-
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
