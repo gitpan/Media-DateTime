@@ -5,6 +5,8 @@ package Media::DateTime::JPEG;
 use strict;
 use warnings;
 
+our $VERSION = '0.48';
+
 use Carp;
 use Image::ExifTool;
 use DateTime;
@@ -87,7 +89,7 @@ Media::DateTime::JPEG - A plugin for the C<Media::DateTime> module to support JP
 
 =head1 VERSION
 
-version 0.45
+version 0.48
 
 =head1 SYNOPSIS
 

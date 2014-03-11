@@ -18,9 +18,10 @@ name: Media-DateTime
 provides:
   Media::DateTime:
     file: lib/Media/DateTime.pm
-    version: '0.45'
+    version: '0.48'
   Media::DateTime::JPEG:
     file: lib/Media/DateTime/JPEG.pm
+    version: '0.48'
 requires:
   Carp: '0'
   DateTime: '0'
@@ -33,4 +34,4 @@ resources:
   bugtracker: http://github.com/mvgrimes/media-datetime/issues
   license: http://dev.perl.org/licenses/
   repository: http://github.com/mvgrimes/media-datetime
-version: '0.45'
+version: '0.48'

@@ -5,7 +5,7 @@ package Media::DateTime;
 use strict;
 use warnings;
 
-our $VERSION = '0.45';
+our $VERSION = '0.48';
 
 use Carp;
 use DateTime;
@@ -50,7 +50,7 @@ Media::DateTime - A simple module to extract the timestamp from media files in a
 
 =head1 VERSION
 
-version 0.45
+version 0.48
 
 =head1 SYNOPSIS
 
